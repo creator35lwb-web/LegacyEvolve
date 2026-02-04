@@ -1,0 +1,41 @@
+direction: right
+
+# Entities
+
+AIAgentHost: "AI Agent Host\n(e.g., Manus, Claude)" {
+  shape: rectangle
+}
+
+LEPClient: "LEP Client" {
+  shape: rectangle
+}
+
+LEPAdapter: "LEP Adapter\n(The Bridge)" {
+  shape: hexagon
+}
+
+LegacySystem: "Legacy System\n(e.g., Mainframe, ERP)" {
+  shape: cylinder
+}
+
+# Connections
+AIAgentHost -> LEPClient: "Initiates Requests"
+LEPClient -> LEPAdapter: "LEP Protocol (JSON-RPC over TLS)" {
+  style.stroke-dash: 3
+}
+LEPAdapter -> LegacySystem: "Native Protocol\n(e.g., 3270, File I/O)"
+
+# Annotations
+
+subgraph "Modern AI World" {
+  AIAgentHost
+  LEPClient
+}
+
+subgraph "Legacy World" {
+  LegacySystem
+}
+
+subgraph "The Protocol Layer" {
+  LEPAdapter
+}
