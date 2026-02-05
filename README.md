@@ -110,7 +110,7 @@ LEP is designed as a multi-layered protocol that ensures secure and reliable AI-
 3.  **LEP Adapter:** The core of the protocol. It translates AI requests into legacy system commands and vice-versa.
 4.  **Legacy System:** The target system (e.g., mainframe, ERP, custom application).
 
-📄 **[Read the Full Architecture Documentation](docs/ARCHITECTURE.md)**
+📄 **[Read the Protocol v2.0 Specification](docs/LegacyEvolve_Protocol_v2.0_Specification.md)**
 
 ---
 
