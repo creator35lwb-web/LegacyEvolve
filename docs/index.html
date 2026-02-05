@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegacyEvolve Protocol - Connecting AI to Legacy Systems</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .tagline {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 50px;
+            opacity: 0.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Content Sections */
+        .section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* How to Contribute */
+        .contribute-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .stat {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section h2 {
+                font-size: 32px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🔄 LegacyEvolve</div>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#features">Features</a>
+                    <a href="#contribute">Contribute</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>LegacyEvolve Protocol</h1>
+            <p>The open-source protocol for connecting modern AI to legacy enterprise systems</p>
+            <p class="tagline">Evolve, Don't Replace</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve" class="btn btn-primary" target="_blank">View on GitHub</a>
+                <a href="#contribute" class="btn btn-secondary">Get Involved</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2>Unlock Trillions in Legacy Value</h2>
+            <p class="section-intro">
+                Trillions of dollars of value are trapped in legacy enterprise systems—COBOL mainframes, 
+                old ERPs, and decades-old databases. The LegacyEvolve Protocol (LEP) provides a secure, 
+                standardized way to connect modern AI to these systems, enabling innovation without 
+                costly replacements.
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">$3T+</div>
+                    <div class="stat-label">Value in Legacy Systems</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">220B+</div>
+                    <div class="stat-label">Lines of COBOL Code</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">v2.0</div>
+                    <div class="stat-label">Current Version</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2>Why LegacyEvolve?</h2>
+            <p class="section-intro">
+                Built with security, transparency, and interoperability at its core.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Security-First</h3>
+                    <p>Human-in-the-loop approval for all write operations. Cryptographically secure tokens. Complete audit trail.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Ecosystem Integration</h3>
+                    <p>Works seamlessly with MCP clients like Claude Desktop, Zed, and JetBrains. Built on JSON-RPC 2.0.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📝</div>
+                    <h3>Complete Auditability</h3>
+                    <p>Immutable audit trail for every transaction. Full transparency and compliance-ready.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Production-Ready</h3>
+                    <p>Complete Python SDK, reference adapter, and comprehensive documentation. Ready to use today.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Open Standards</h3>
+                    <p>Built on industry standards and best practices. Interoperable with the broader agent protocol ecosystem.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Public Good</h3>
+                    <p>MIT licensed, community-driven, and built for the benefit of all. No vendor lock-in.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Contribute Section -->
+    <section class="section" id="contribute">
+        <div class="container">
+            <h2>How to Get Involved</h2>
+            <p class="section-intro">
+                Join a growing community of developers, researchers, and organizations building the future of AI-legacy integration.
+            </p>
+
+            <div class="contribute-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Explore the Docs</h3>
+                    <p>Start by reading the <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Protocol Specification</a> and <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide</a>.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Try the SDK</h3>
+                    <p>Clone the repo, run the test suite, and explore the Python SDK. See LEP in action with the example adapter.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Build an Adapter</h3>
+                    <p>Create an LEP adapter for a legacy system you know. Share it with the community and help expand the ecosystem.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Join Discussions</h3>
+                    <p>Participate in <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">GitHub Discussions</a>. Share ideas, ask questions, and help shape the future of LEP.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Contribute Code</h3>
+                    <p>Submit pull requests to improve the protocol, SDK, documentation, or tooling. Every contribution matters.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Spread the Word</h3>
+                    <p>Share LEP with your network. Write blog posts, give talks, and help grow the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build the Future?</h2>
+            <p>The LegacyEvolve Protocol is ready for you. Join us in unlocking the value of legacy systems.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve" class="btn btn-primary" target="_blank">Get Started on GitHub</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" class="btn btn-secondary" target="_blank">Join the Discussion</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LegacyEvolve Protocol. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
+            <p style="margin-top: 10px;">Built with ❤️ for the public good</p>
+        </div>
+    </footer>
+</body>
+</html>
