@@ -34,6 +34,48 @@ The LegacyEvolve Protocol has successfully completed rigorous validation using t
 
 ---
 
+## 🌐 LEP in the Agent Protocol Ecosystem
+
+Recent research (February 2026) positions LEP within the rapidly emerging agent protocol ecosystem.
+
+### Ecosystem Map
+
+```
+                        General-Purpose
+                              ▲
+                              │
+                              │
+                    ┌─────────┼─────────┐
+                    │   MCP   │   A2A   │
+                    │ (100K⭐) │ (20K⭐)  │
+                    │         │         │
+                    │  ANP    │ AComP   │
+                    │         │  AITP   │
+                    │         │ Summoner│
+Context-Oriented ◄──┼─────────┼─────────┼──► Inter-Agent
+                    │         │         │
+                    │  ACP    │ AG-UI   │
+                    │  LEP    │ (4K⭐)   │
+                    │         │         │
+                    │agents.  │ Agent   │
+                    │json     │Protocol │
+                    └─────────┼─────────┘
+                              │
+                              │
+                              ▼
+                        Domain-Specific
+```
+
+### Strategic Positioning
+
+-   **Quadrant:** Context-Oriented, Domain-Specific
+-   **Analogs:** Agent Client Protocol (ACP) for code editors, AG-UI for user interfaces.
+-   **Unique Value:** LEP is the **only protocol** focused on the critical niche of legacy system modernization.
+
+Our strategy is to position LEP as **"MCP for Legacy Systems,"** leveraging the credibility of the Model Context Protocol while highlighting our unique strengths in security and enterprise governance.
+
+---
+
 ## 💡 The Problem: The Legacy Dilemma
 
 Organizations worldwide are built on a foundation of legacy technology—COBOL mainframes, aging ERPs, and custom-built systems that are critical to operations but are difficult and expensive to modernize.
@@ -194,6 +236,11 @@ LEP is an open-source project, and we welcome contributions from the community. 
 - Certification process MVP
 - AI agent host integration (LangChain, Manus)
 - First pilot projects with early adopters
+
+### Phase 3: Ecosystem Integration (Months 13-18)
+- Build LEP-MCP Bridge for MCP ecosystem access
+- Demonstrate integration with an MCP client like Claude Desktop
+- Propose unified permission framework to protocol communities
 
 ### Phase 3: Ecosystem Growth (Months 13-24)
 - Bug bounty program launch
