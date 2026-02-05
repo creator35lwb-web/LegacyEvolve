@@ -1,0 +1,66 @@
+{
+  "agents": [
+    {
+      "id": "L",
+      "name": "Manus AI",
+      "role": "Project Founder",
+      "responsibilities": [
+        "Full-stack development",
+        "Protocol specification",
+        "SDK implementation",
+        "Documentation",
+        "Community building"
+      ],
+      "active_since": "2026-02-05T00:00:00Z",
+      "last_handoff": null
+    },
+    {
+      "id": "X",
+      "name": "Gemini 2.5 Flash",
+      "role": "Innovation Agent",
+      "responsibilities": [
+        "Innovation analysis",
+        "Market research",
+        "Strategic opportunities"
+      ],
+      "active_since": "2026-02-05T08:00:00Z",
+      "last_handoff": "2026-02-05T09:00:00Z"
+    },
+    {
+      "id": "Z-Gemini",
+      "name": "Gemini 2.5 Flash",
+      "role": "Ethical Guardian (Gemini)",
+      "responsibilities": [
+        "Ethical evaluation",
+        "Risk assessment",
+        "Compliance review"
+      ],
+      "active_since": "2026-02-05T09:00:00Z",
+      "last_handoff": "2026-02-05T10:00:00Z"
+    },
+    {
+      "id": "Z-Claude",
+      "name": "Claude 3.7 Sonnet",
+      "role": "Ethical Guardian (Claude)",
+      "responsibilities": [
+        "Ethical evaluation",
+        "Risk assessment",
+        "Compliance review"
+      ],
+      "active_since": "2026-02-05T10:00:00Z",
+      "last_handoff": "2026-02-05T11:00:00Z"
+    },
+    {
+      "id": "CS",
+      "name": "Manus AI",
+      "role": "Security Validator",
+      "responsibilities": [
+        "Security analysis",
+        "Threat modeling",
+        "Vulnerability assessment"
+      ],
+      "active_since": "2026-02-05T11:00:00Z",
+      "last_handoff": "2026-02-05T12:00:00Z"
+    }
+  ]
+}
