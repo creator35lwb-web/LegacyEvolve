@@ -199,6 +199,17 @@
             margin: 0;
         }
 
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f0fdf4;
+            color: #059669;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
         .cta-box {
             background: #f9fafb;
             border: 1px solid #e5e5e5;
@@ -338,7 +349,14 @@
                     <div class="nav-section-title">Implementation</div>
                     <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a>
                     <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/lep_py/adapter/example_adapter.py" target="_blank">Example Adapter</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Multi-Agent</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_v2.0_Specification.md" target="_blank">MACP v2.0</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Genesis_Master_Prompt.md" target="_blank">Genesis Master Prompt</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/L_GODEL_Ethical_Operating_Framework_v1.1.md" target="_blank">Ethical Framework</a>
                 </div>
 
                 <div class="nav-section">
@@ -359,10 +377,14 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="breadcrumb">Get Started</div>
-            <h1>Introduction</h1>
-            <p class="subtitle">Get started with the LegacyEvolve Protocol.</p>
+            <h1>Introduction <span class="status-badge">✓ Production Ready</span></h1>
+            <p class="subtitle">A standardized protocol for AI-legacy system integration, built for the public good.</p>
 
-            <p>The LegacyEvolve Protocol (LEP) standardizes communication between modern AI agents and legacy enterprise systems, enabling secure integration without costly replacements.</p>
+            <p>The LegacyEvolve Protocol (LEP) standardizes communication between modern AI agents and legacy enterprise systems, enabling secure integration without costly replacements. LEP is production-ready with a complete Python SDK, reference adapters, and comprehensive documentation.</p>
+
+            <div class="info-box">
+                <p><strong>Latest Update (Feb 2026):</strong> LEP v2.0 is now live with COBOL mainframe adapter, LEP-MCP bridge, Multi-Agent Communication Protocol (MACP) v2.0, and ethical governance framework. Validated by FLYWHEEL TEAM (Gemini, Claude, Manus).</p>
+            </div>
 
             <h2>Why LEP?</h2>
 
@@ -413,15 +435,30 @@
                 <li><strong>Human-in-the-Loop:</strong> All write operations require explicit human approval with cryptographically secure tokens</li>
                 <li><strong>Complete Auditability:</strong> Immutable audit trail for every transaction, meeting compliance requirements</li>
                 <li><strong>MCP Integration:</strong> LEP adapters work seamlessly with MCP clients like Claude Desktop and Zed</li>
-                <li><strong>Production-Ready:</strong> Complete Python SDK, reference adapter, and comprehensive documentation</li>
+                <li><strong>Production-Ready:</strong> Complete Python SDK, COBOL mainframe adapter, and comprehensive documentation</li>
+                <li><strong>Multi-Agent Ready:</strong> Built-in support for persistent multi-agent collaboration via MACP v2.0</li>
+                <li><strong>Ethically Governed:</strong> L (GODEL) Ethical Operating Framework v1.1 ensures responsible AI operation</li>
                 <li><strong>Open Standard:</strong> MIT licensed, community-driven, and built for the public good</li>
+            </ul>
+
+            <h2>What's New in v2.0</h2>
+
+            <p>LEP v2.0 brings significant enhancements based on agent protocol ecosystem research:</p>
+
+            <ul>
+                <li><strong>COBOL Mainframe Adapter:</strong> Production-grade reference implementation with working banking demo</li>
+                <li><strong>LEP-MCP Bridge:</strong> Seamless interoperability with Model Context Protocol ecosystem</li>
+                <li><strong>MACP v2.0:</strong> Multi-Agent Communication Protocol for persistent GitHub-native collaboration</li>
+                <li><strong>Ethical Framework v1.1:</strong> Comprehensive ethical governance based on Claude Opus 4.5 Soul principles</li>
+                <li><strong>Genesis Master Prompt v3.0:</strong> Complete onboarding system for future AI agents</li>
+                <li><strong>FLYWHEEL TEAM Validation:</strong> Multi-model validation (Gemini 10/10, Claude 8/10, Manus 9/10)</li>
             </ul>
 
             <div class="cta-box">
                 <h3>Ready to Get Started?</h3>
                 <p>Explore the protocol specification and start building LEP adapters for your legacy systems.</p>
                 <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" class="btn" target="_blank">Read the Specification</a>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" class="btn btn-secondary" target="_blank">Implementation Guide</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" class="btn btn-secondary" target="_blank">Try the Demo</a>
             </div>
 
             <h2>Next Steps</h2>
@@ -431,7 +468,8 @@
             <ul>
                 <li>Read the <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture Overview</a> to understand the system design</li>
                 <li>Review the <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Protocol Specification v2.0</a> for technical details</li>
-                <li>Try the <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a> with the example adapter</li>
+                <li>Try the <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Mainframe Demo</a> to see LEP in action</li>
+                <li>Explore <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_v2.0_Specification.md" target="_blank">MACP v2.0</a> for multi-agent collaboration</li>
                 <li>Join the <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community Discussion</a> to ask questions and share ideas</li>
             </ul>
         </main>
@@ -442,13 +480,14 @@
             <a href="#why-lep">Why LEP?</a>
             <a href="#overview">Overview</a>
             <a href="#key-features">Key Features</a>
+            <a href="#whats-new-in-v20">What's New in v2.0</a>
             <a href="#next-steps">Next Steps</a>
         </aside>
 
         <!-- Footer -->
         <footer>
             <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
-            <p style="margin-top: 8px;">Built with ❤️ for the public good</p>
+            <p style="margin-top: 8px;">Built with ❤️ for the public good by L (GODEL) and the community</p>
         </footer>
     </div>
 </body>
