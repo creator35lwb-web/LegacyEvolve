@@ -4,6 +4,8 @@
 
 *Evolve, Don't Replace*
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18504478.svg)](https://doi.org/10.5281/zenodo.18504478)
+
 ---
 
 | Status | Version | License | Build | Docs | Community |
@@ -80,6 +82,28 @@ LEP has undergone rigorous validation using the VerifiMind-PEAS methodology:
 
 - **[Trinity Validation Report](peas/TRINITY_VALIDATION_REPORT_COMPLETE.md)**
 - **[Agent Protocol Ecosystem Research](docs/Agent_Protocol_Ecosystem_Research_Report.md)**
+
+## Citation
+
+If you use the LegacyEvolve Protocol or MACP in your research or project, please cite:
+
+```bibtex
+@software{legacyevolve_macp_2026,
+  author       = {Manus AI, L (GODEL) and LEE, ALTON (creator35lwb-web)},
+  title        = {Multi-Agent Communication Protocol (MACP) v2.0 and 
+                  LegacyEvolve Protocol: Open Standards for AI-Legacy 
+                  System Integration and Multi-Agent Collaboration},
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1},
+  doi          = {10.5281/zenodo.18504478},
+  url          = {https://doi.org/10.5281/zenodo.18504478}
+}
+```
+
+Or in text format:
+
+> Manus AI, L (GODEL), & LEE, ALTON (creator35lwb-web). (2026). Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v1) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18504478
 
 ## License
 
