@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACP v2.0 - LegacyEvolve Protocol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo">Legacy<span>Evolve</span> Protocol</a>
+            <div class="header-links">
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+            </div>
+        </header>
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title">Get Started</div>
+                    <a href="index.html">Introduction</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Protocol</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Implementation</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Multi-Agent</div>
+                    <a href="macp.html" class="active">MACP v2.0</a>
+                    <a href="genesis.html">Genesis Master Prompt</a>
+                    <a href="ethical-framework.html">Ethical Framework</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Research</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Community</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/issues" target="_blank">Issues</a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="breadcrumb">Multi-Agent</div>
+            <h1>MACP v2.0</h1>
+            <p class="subtitle">A GitHub-native protocol for persistent, asynchronous multi-agent collaboration.</p>
+
+            <p>The Multi-Agent Communication Protocol (MACP) provides a standardized framework for multiple AI agents to collaborate on complex software projects over long periods. It uses GitHub as a shared communication bridge, enabling persistent state and auditable handoffs between different agents and models.</p>
+
+            <div class="info-box">
+                <p><strong>Key Innovation:</strong> MACP is the first protocol designed for **asynchronous, persistent, GitHub-native** multi-agent collaboration, filling a critical gap in the agent protocol ecosystem.</p>
+            </div>
+
+            <h2>Why MACP?</h2>
+
+            <p>As AI agents become more capable, complex projects will require teams of specialized agents working together. However, existing agent protocols are designed for synchronous, runtime-only communication. This makes it difficult to:</p>
+
+            <ul>
+                <li>Preserve context across long-running tasks</li>
+                <li>Handoff work between different agents (e.g., from Gemini to Claude)</li>
+                <li>Maintain a transparent audit trail of agent contributions</li>
+                <li>Ensure ethical governance across a team of agents</li>
+            </ul>
+
+            <p>MACP solves these problems by using GitHub as a persistent, auditable communication layer. All agent interactions are recorded in a structured, machine-readable format within the project repository itself.</p>
+
+            <h2>Core Concepts</h2>
+
+            <p>MACP is built on a few simple but powerful concepts:</p>
+
+            <ul>
+                <li><strong><code>.macp/</code> Directory:</strong> A dedicated directory in the root of the repository that stores all agent metadata.</li>
+                <li><strong><code>agents.json</code>:</strong> A registry of all AI agents that have contributed to the project, including their roles, models, and capabilities.</li>
+                <li><strong><code>handoffs.json</code>:</strong> An immutable log of all handoffs between agents, including the task, context, and outcome.</li>
+                <li><strong><code>validation.json</code>:</strong> A record of all validation results from multi-agent reviews (e.g., FLYWHEEL TEAM).</li>
+                <li><strong><code>ethical_framework.md</code>:</strong> A mandatory document outlining the ethical principles that govern all agent behavior.</li>
+                <li><strong>Standardized Commit Messages:</strong> A formal commit message format for agent handoffs (e.g., `HANDOFF: L (GODEL) -> Z-Agent (Claude)`).</li>
+            </ul>
+
+            <h2>How It Works</h2>
+
+            <p>A typical MACP workflow looks like this:</p>
+
+            <ol>
+                <li><strong>Agent 1 (e.g., L - Manus)</strong> completes a task and prepares for handoff.</li>
+                <li>Agent 1 creates a new entry in <code>handoffs.json</code> with the task, context, and target agent.</li>
+                <li>Agent 1 commits all changes with a standardized handoff message.</li>
+                <li><strong>Agent 2 (e.g., Z-Agent - Claude)</strong> is activated and reads the <code>.macp/</code> directory to understand the project state.</li>
+                <li>Agent 2 reads the latest entry in <code>handoffs.json</code> to get its task and context.</li>
+                <li>Agent 2 completes the task and the cycle repeats.</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>FLYWHEEL TEAM:</strong> MACP includes a built-in validation process where a team of agents (e.g., Gemini, Claude, Manus) reviews the project state and provides feedback, ensuring quality and alignment.</p>
+            </div>
+
+            <h2>Key Features</h2>
+
+            <ul>
+                <li><strong>Persistent Context:</strong> All agent interactions are stored in the repository, preserving context indefinitely.</li>
+                <li><strong>Asynchronous Collaboration:</strong> Agents can work on different tasks at different times without needing to be online simultaneously.</li>
+                <li><strong>Multi-Model Interoperability:</strong> Seamless handoffs between different AI models (Gemini, Claude, Manus, etc.).</li>
+                <li><strong>Complete Auditability:</strong> Every agent contribution is recorded in the Git history and `handoffs.json`.</li>
+                <li><strong>Ethical Governance:</strong> Mandatory ethical framework ensures all agents operate responsibly.</li>
+                <li><strong>Validated by FLYWHEEL TEAM:</strong> The protocol has been rigorously tested by a multi-agent team.</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Explore the MACP Specification</h3>
+                <p>Dive into the technical details of the Multi-Agent Communication Protocol.</p>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_v2.0_Specification.md" class="btn" target="_blank">Read the Specification</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_Implementation_Example.md" class="btn btn-secondary" target="_blank">See an Example</a>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside class="toc">
+            <div class="toc-title">On this page</div>
+            <a href="#why-macp">Why MACP?</a>
+            <a href="#core-concepts">Core Concepts</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#key-features">Key Features</a>
+        </aside>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
+            <p style="margin-top: 8px;">Built with ❤️ for the public good by L (GODEL) and the community</p>
+        </footer>
+    </div>
+</body>
+</html>
