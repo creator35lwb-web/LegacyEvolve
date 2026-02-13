@@ -5,12 +5,15 @@
 *Evolve, Don't Replace*
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18504478.svg)](https://doi.org/10.5281/zenodo.18504478)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Security Scanning](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/security-scan.yml/badge.svg)](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/security-scan.yml)
+[![Integration Tests](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/integration-tests.yml)
 
 ---
 
-| Status | Version | License | Build | Docs | Community |
+| Status | Version | License | Security | Docs | Community |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ✅ Active | v2.0 | MIT | Passing | Complete | [Discussions](https://github.com/creator35lwb-web/LegacyEvolve/discussions) |
+| ✅ Active | v2.1 | MIT | 🔒 Hardened | [Wiki](https://github.com/creator35lwb-web/LegacyEvolve/wiki) | [Discussions](https://github.com/creator35lwb-web/LegacyEvolve/discussions) |
 
 ---
 
@@ -56,9 +59,53 @@ As of February 2026, the LegacyEvolve Protocol has achieved all initial developm
 - ✅ **LEP-MCP Bridge**: Seamless integration with the MCP ecosystem
 - ✅ **Comprehensive Documentation**: Implementation guide, SDK docs, and more
 
-## Get Started
+## Quick Start (5 Minutes)
 
-### 1. Read the Documentation
+### Install LEP Python SDK
+
+```bash
+pip install lep-py
+```
+
+### Create Your First Adapter
+
+```python
+from lep_py.adapter import BaseAdapter
+
+class MyLegacyAdapter(BaseAdapter):
+    def read_data(self, query):
+        # Connect to your legacy system
+        return {"status": "success", "data": "Hello from legacy!"}
+
+adapter = MyLegacyAdapter()
+result = adapter.read_data({"table": "customers"})
+print(result)
+```
+
+### Connect to AI Agents via MCP
+
+```bash
+# Install LEP-MCP Bridge
+npm install lep-mcp-bridge
+
+# Configure Claude Desktop
+echo '{
+  "mcpServers": {
+    "legacy-system": {
+      "command": "lep-mcp-bridge",
+      "args": ["--adapter", "./my_adapter.py"]
+    }
+  }
+}' > ~/Library/Application\ Support/Claude/claude_desktop_config.json
+```
+
+**Done!** Your AI agent can now safely interact with your legacy system.
+
+---
+
+## Full Documentation
+
+### 1. Protocol & Architecture
 
 - **[Protocol v2.0 Specification](docs/LegacyEvolve_Protocol_v2.0_Specification.md)**
 - **[Implementation Guide](docs/IMPLEMENTATION_GUIDE.md)**
@@ -70,7 +117,13 @@ As of February 2026, the LegacyEvolve Protocol has achieved all initial developm
 - **[Example Adapter](src/lep_py/adapter/example_adapter.py)**
 - **[Test Suite](src/test_adapter.py)**
 
-### 3. Contribute
+### 3. Security & Governance
+
+- **[Security Policy](SECURITY.md)** - Report vulnerabilities responsibly
+- **[Governance](GOVERNANCE.md)** - Community decision-making process
+- **[Sustainability](SUSTAINABILITY.md)** - Long-term roadmap and funding
+
+### 4. Contribute
 
 - **[Contributing Guidelines](CONTRIBUTING.md)**
 - **[Open Issues](https://github.com/creator35lwb-web/LegacyEvolve/issues)**
@@ -80,8 +133,24 @@ As of February 2026, the LegacyEvolve Protocol has achieved all initial developm
 
 LEP has undergone rigorous validation using the VerifiMind-PEAS methodology:
 
-- **[Trinity Validation Report](peas/TRINITY_VALIDATION_REPORT_COMPLETE.md)**
-- **[Agent Protocol Ecosystem Research](docs/Agent_Protocol_Ecosystem_Research_Report.md)**
+- **[Trinity Validation Report](peas/TRINITY_VALIDATION_REPORT_COMPLETE.md)** - 8.67/10 overall score
+- **[Agent Protocol Ecosystem Research](docs/Agent_Protocol_Ecosystem_Research_Report.md)** - Market analysis
+- **[FLYWHEEL TEAM Validation](https://github.com/creator35lwb-web/LegacyEvolve/wiki#flywheel-team-validation)** - Multi-agent ethical review with bias minimization
+
+## Why LEP?
+
+### The Problem
+
+- **$3 trillion** locked in legacy systems (COBOL, mainframes, proprietary databases)
+- **80%+ AI project failure rate** due to integration challenges
+- **30% GenAI projects abandoned** by end-2025 due to poor controls
+
+### The Solution
+
+- **Security-First:** Human-in-the-loop approval, immutable audit trail
+- **Open Standard:** MIT license, community-driven, Digital Public Good
+- **Proven Validation:** FLYWHEEL TEAM 8.67/10 score with bias minimization
+- **Real-World Ready:** Supply chain attack prevention, CI/CD security scanning
 
 ## Citation
 
