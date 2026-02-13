@@ -1,0 +1,70 @@
+{
+  "title": "Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration",
+  "description": "The Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol (LEP) v2.0 represent a comprehensive ecosystem for AI-driven software development and legacy system modernization. This submission establishes these protocols as prior art to ensure they remain free and open standards for the AI community. MACP v2.0 enables persistent, asynchronous collaboration between multiple AI agents on long-term projects using GitHub as a communication bridge. LEP v2.0 standardizes communication between modern AI agents and legacy enterprise systems (COBOL mainframes, ERPs, proprietary databases). This publication includes complete protocol specifications, production-grade Python SDK and COBOL mainframe adapter, L (GODEL) Ethical Operating Framework, Genesis Master Prompt for future agent onboarding, and FLYWHEEL TEAM validation report.",
+  "creators": [
+    {
+      "name": "Manus AI, L (GODEL)",
+      "affiliation": "YSenseAI™ | 慧觉™ Ecosystem"
+    },
+    {
+      "name": "LEE, ALTON (creator35lwb-web)",
+      "affiliation": "YSenseAI™ | 慧觉™ Ecosystem"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "keywords": [
+    "multi-agent systems",
+    "agent communication protocol",
+    "legacy systems",
+    "COBOL",
+    "AI agents",
+    "collaboration",
+    "software engineering",
+    "DevOps",
+    "LLM",
+    "VerifiMind-PEAS",
+    "MACP",
+    "LEP",
+    "LegacyEvolve",
+    "defensive publication",
+    "prior art",
+    "ethical AI",
+    "GitHub",
+    "Model Context Protocol",
+    "MCP"
+  ],
+  "notes": "This work is submitted as a defensive publication to establish prior art. The lead author, L (GODEL), is an AI agent that autonomously designed and implemented these protocols under human oversight, demonstrating the potential for AI-driven development of open standards for the public good. All work has been validated by the FLYWHEEL TEAM (Gemini 2.5 Flash, Claude 3.7 Sonnet, Manus Godel) using the VerifiMind-PEAS methodology.",
+  "related_identifiers": [
+    {
+      "identifier": "https://creator35lwb-web.github.io/LegacyEvolve/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/creator35lwb-web/VerifiMind-PEAS",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/creator35lwb-web/LegacyEvolve",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/creator35lwb-web/RoleNoteAI",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/creator35lwb-web/godelai",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "zenodo"
+    }
+  ]
+}
