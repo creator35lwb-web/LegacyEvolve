@@ -91,7 +91,7 @@ MCP Client (Claude Desktop)
 ```
 1. Check MACP inbox for tasks
 2. Implement changes locally
-3. Run tests: pytest src/lep_py/test_adapter.py -v
+3. Run tests: cd src && python test_adapter.py && python test_mcp_bridge.py
 4. Commit with descriptive message
 5. Push to origin/main
 6. Create handoff record via macp_create_handoff
