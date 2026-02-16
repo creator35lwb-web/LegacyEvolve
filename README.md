@@ -4,7 +4,7 @@
 
 *Evolve, Don't Replace*
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18504478.svg)](https://doi.org/10.5281/zenodo.18504478)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18663782.svg)](https://doi.org/10.5281/zenodo.18663782)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Security Scanning](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/security-scan.yml/badge.svg)](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/security-scan.yml)
 [![Integration Tests](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/creator35lwb-web/LegacyEvolve/actions/workflows/integration-tests.yml)
@@ -15,7 +15,7 @@
 
 | Status | Version | License | Security | Docs | Community |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ✅ Active | v2.1 | MIT | 🔒 Hardened | [Wiki](https://github.com/creator35lwb-web/LegacyEvolve/wiki) | [Discussions](https://github.com/creator35lwb-web/LegacyEvolve/discussions) |
+| ✅ Active | v2.3 | MIT | 🔒 Hardened | [Wiki](https://github.com/creator35lwb-web/LegacyEvolve/wiki) | [Discussions](https://github.com/creator35lwb-web/LegacyEvolve/discussions) |
 
 ---
 
@@ -166,15 +166,15 @@ If you use the LegacyEvolve Protocol or MACP in your research or project, please
                   System Integration and Multi-Agent Collaboration},
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1},
-  doi          = {10.5281/zenodo.18504478},
-  url          = {https://doi.org/10.5281/zenodo.18504478}
+  version      = {v2.3},
+  doi          = {10.5281/zenodo.18663782},
+  url          = {https://doi.org/10.5281/zenodo.18663782}
 }
 ```
 
 Or in text format:
 
-> Manus AI, L (GODEL), & LEE, ALTON (creator35lwb-web). (2026). Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v1) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18504478
+> Manus AI, L (GODEL), & LEE, ALTON (creator35lwb-web). (2026). Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v1) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18663782
 
 ## License
 
