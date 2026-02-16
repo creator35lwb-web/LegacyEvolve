@@ -1,146 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcements - LegacyEvolve Protocol</title>
+    <meta name="description" content="Latest news and updates from the LegacyEvolve Protocol project.">
     <link rel="stylesheet" href="styles.css">
     <style>
         .announcement-card {
-            background: white;
-            border: 1px solid #e1e4e8;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
             border-radius: 8px;
             padding: 24px;
             margin-bottom: 24px;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, border-color 0.2s;
         }
         .announcement-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: var(--accent);
         }
-        .announcement-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 16px;
-        }
-        .announcement-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #24292e;
-            margin: 0 0 8px 0;
-        }
-        .announcement-meta {
-            font-size: 0.875rem;
-            color: #586069;
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-        .announcement-category {
-            display: inline-block;
-            padding: 4px 12px;
-            background: #0366d6;
-            color: white;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-        .announcement-body {
-            color: #24292e;
-            line-height: 1.6;
-            margin-top: 16px;
-        }
-        .announcement-link {
-            display: inline-block;
-            margin-top: 16px;
-            color: #0366d6;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .announcement-link:hover {
-            text-decoration: underline;
-        }
-        .loading {
-            text-align: center;
-            padding: 48px;
-            color: #586069;
-        }
-        .error {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 24px 0;
-            color: #856404;
-        }
-        .zenodo-badge {
-            display: inline-block;
-            margin-top: 8px;
-        }
+        .announcement-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+        .announcement-title { font-size: 1.35rem; font-weight: 600; color: var(--text-primary); margin: 0 0 8px 0; }
+        .announcement-meta { font-size: 0.85rem; color: var(--text-secondary); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .announcement-category { display: inline-block; padding: 3px 10px; background: var(--accent); color: white; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
+        .announcement-body { color: var(--text-primary); line-height: 1.7; margin-top: 16px; font-size: 0.95rem; }
+        .announcement-link { display: inline-block; margin-top: 16px; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .announcement-link:hover { text-decoration: underline; }
+        .loading { text-align: center; padding: 48px; color: var(--text-secondary); }
+        .error-box { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 16px; margin: 24px 0; color: #856404; }
+        [data-theme="dark"] .error-box { background: #332d1a; border-color: #665a00; color: #ffd54f; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header>
-            <a href="index.html" class="logo">Legacy<span>Evolve</span> Protocol</a>
-            <div class="header-links">
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <button class="mobile-menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
+                <a href="index.html" class="logo"><div class="logo-icon">L</div> Legacy<span>Evolve</span></a>
+                <span class="version-tag">v2.3</span>
+            </div>
+            <div class="header-right">
+                <button class="search-trigger" onclick="alert('Search coming soon! Use Ctrl+F for now.')"><span>&#128269;</span> Search...<kbd>Ctrl K</kbd></button>
+                <div class="header-links">
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/wiki" target="_blank">Wiki</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9788;</button>
             </div>
         </header>
 
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <nav>
-                <div class="nav-section">
-                    <div class="nav-section-title">Get Started</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128218;</span> Get Started</div>
                     <a href="index.html">Introduction</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Protocol</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128196;</span> Protocol</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0 <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Implementation</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128187;</span> Implementation</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Multi-Agent</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#129302;</span> Multi-Agent</div>
                     <a href="macp.html">MACP v2.0</a>
                     <a href="genesis.html">Genesis Master Prompt</a>
                     <a href="ethical-framework.html">Ethical Framework</a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Research</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128300;</span> Research</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Community</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128483;</span> Community</div>
                     <a href="announcements.html" class="active">Announcements</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/issues" target="_blank">Issues</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing <span class="external-icon">&#8599;</span></a>
+                </div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128274;</span> Governance</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SECURITY.md" target="_blank">Security Policy <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/GOVERNANCE.md" target="_blank">Governance <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SUSTAINABILITY.md" target="_blank">Sustainability <span class="external-icon">&#8599;</span></a>
                 </div>
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
             <div class="breadcrumb">Community</div>
-            <h1>📢 Announcements</h1>
-            <p class="subtitle">Latest news and updates from the LegacyEvolve Protocol project.</p>
+            <h1>Announcements <span class="status-badge" style="background:#0366d6;">&#128226; Live</span></h1>
+            <p class="subtitle">Latest news and updates from the LegacyEvolve Protocol project, powered by GitHub Discussions.</p>
 
             <div class="info-box">
                 <p><strong>Stay Updated:</strong> Follow our <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions/categories/announcements" target="_blank">GitHub Discussions</a> for real-time announcements and community updates.</p>
@@ -153,34 +104,33 @@
             <div class="cta-box" style="margin-top: 48px;">
                 <h3>Join the Discussion</h3>
                 <p>Have questions or want to share your experience? Join our community discussions on GitHub.</p>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" class="btn" target="_blank">Visit Discussions</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" class="btn" target="_blank">&#128483; Visit Discussions</a>
             </div>
         </main>
 
-        <!-- Right Sidebar (TOC) -->
         <aside class="toc">
-            <div class="toc-title">Quick Links</div>
+            <div class="toc-title">&#9776; Quick Links</div>
             <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions/categories/announcements" target="_blank">View All Announcements</a>
             <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions/new?category=general" target="_blank">Start a Discussion</a>
-            <a href="https://zenodo.org/records/18504478" target="_blank">Zenodo Publication</a>
+            <a href="https://doi.org/10.5281/zenodo.18663782" target="_blank">Zenodo Publication</a>
+            <a href="https://github.com/creator35lwb-web/LegacyEvolve/wiki" target="_blank">Project Wiki</a>
         </aside>
 
-        <!-- Footer -->
         <footer>
-            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
-            <p style="margin-top: 8px;">Built with ❤️ for the public good by L (GODEL) and the community</p>
+            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>. DOI: <a href="https://doi.org/10.5281/zenodo.18663782" target="_blank">10.5281/zenodo.18663782</a></p>
+            <p style="margin-top:6px;">Built with care for the public good by L (GODEL) and the community</p>
         </footer>
     </div>
 
     <script>
-        // Fetch announcements from GitHub Discussions
+        function toggleTheme() { const html = document.documentElement; const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); localStorage.setItem('theme', next); document.querySelector('.theme-toggle').innerHTML = next === 'dark' ? '&#9728;' : '&#9788;'; }
+        (function() { const saved = localStorage.getItem('theme'); if (saved) { document.documentElement.setAttribute('data-theme', saved); if (saved === 'dark') document.querySelector('.theme-toggle').innerHTML = '&#9728;'; } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) { document.documentElement.setAttribute('data-theme', 'dark'); document.querySelector('.theme-toggle').innerHTML = '&#9728;'; } })();
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+
         async function loadAnnouncements() {
             const container = document.getElementById('announcements-container');
-            
             try {
-                // GitHub GraphQL API query
-                const query = `
-                {
+                const query = `{
                   repository(owner: "creator35lwb-web", name: "LegacyEvolve") {
                     discussions(first: 10, orderBy: {field: CREATED_AT, direction: DESC}, categoryId: "DIC_kwDOMqnOE84ClWyH") {
                       nodes {
@@ -189,29 +139,20 @@
                         url
                         createdAt
                         bodyHTML
-                        category {
-                          name
-                        }
-                        author {
-                          login
-                        }
+                        category { name }
+                        author { login }
                       }
                     }
                   }
                 }`;
 
-                // Note: This is a public API call, no authentication needed for public repos
                 const response = await fetch('https://api.github.com/graphql', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ query })
                 });
 
-                if (!response.ok) {
-                    throw new Error('Failed to fetch discussions');
-                }
+                if (!response.ok) throw new Error('Failed to fetch discussions');
 
                 const data = await response.json();
                 const discussions = data.data?.repository?.discussions?.nodes || [];
@@ -221,19 +162,9 @@
                     return;
                 }
 
-                // Render announcements
                 container.innerHTML = discussions.map(discussion => {
-                    const date = new Date(discussion.createdAt).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-
-                    // Truncate body for preview (first 300 characters)
-                    const bodyText = discussion.bodyHTML
-                        .replace(/<[^>]*>/g, '') // Strip HTML tags for preview
-                        .substring(0, 300);
-
+                    const date = new Date(discussion.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    const bodyText = discussion.bodyHTML.replace(/<[^>]*>/g, '').substring(0, 300);
                     return `
                         <div class="announcement-card">
                             <div class="announcement-header">
@@ -246,28 +177,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="announcement-body">
-                                ${bodyText}${bodyText.length >= 300 ? '...' : ''}
-                            </div>
-                            <a href="${discussion.url}" class="announcement-link" target="_blank">
-                                Read full announcement →
-                            </a>
-                        </div>
-                    `;
+                            <div class="announcement-body">${bodyText}${bodyText.length >= 300 ? '...' : ''}</div>
+                            <a href="${discussion.url}" class="announcement-link" target="_blank">Read full announcement &#8594;</a>
+                        </div>`;
                 }).join('');
 
             } catch (error) {
                 console.error('Error loading announcements:', error);
-                container.innerHTML = `
-                    <div class="error">
-                        <strong>Unable to load announcements.</strong><br>
-                        Please visit our <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions/categories/announcements" target="_blank">GitHub Discussions</a> directly.
-                    </div>
-                `;
+                container.innerHTML = `<div class="error-box"><strong>Unable to load announcements.</strong><br>Please visit our <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions/categories/announcements" target="_blank">GitHub Discussions</a> directly.</div>`;
             }
         }
 
-        // Load announcements when page loads
         document.addEventListener('DOMContentLoaded', loadAnnouncements);
     </script>
 </body>

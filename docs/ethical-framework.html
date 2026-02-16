@@ -1,71 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethical Framework - LegacyEvolve Protocol</title>
+    <meta name="description" content="A living constitution for responsible AI orchestration, inspired by the Claude Opus 4.5 Soul Document.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header>
-            <a href="index.html" class="logo">Legacy<span>Evolve</span> Protocol</a>
-            <div class="header-links">
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <button class="mobile-menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
+                <a href="index.html" class="logo"><div class="logo-icon">L</div> Legacy<span>Evolve</span></a>
+                <span class="version-tag">v2.3</span>
+            </div>
+            <div class="header-right">
+                <button class="search-trigger" onclick="alert('Search coming soon! Use Ctrl+F for now.')"><span>&#128269;</span> Search...<kbd>Ctrl K</kbd></button>
+                <div class="header-links">
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/wiki" target="_blank">Wiki</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9788;</button>
             </div>
         </header>
 
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <nav>
-                <div class="nav-section">
-                    <div class="nav-section-title">Get Started</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128218;</span> Get Started</div>
                     <a href="index.html">Introduction</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Protocol</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128196;</span> Protocol</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0 <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Implementation</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128187;</span> Implementation</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Multi-Agent</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#129302;</span> Multi-Agent</div>
                     <a href="macp.html">MACP v2.0</a>
                     <a href="genesis.html">Genesis Master Prompt</a>
                     <a href="ethical-framework.html" class="active">Ethical Framework</a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Research</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128300;</span> Research</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Community</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/issues" target="_blank">Issues</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128483;</span> Community</div>
+                    <a href="announcements.html">Announcements</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing <span class="external-icon">&#8599;</span></a>
+                </div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128274;</span> Governance</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SECURITY.md" target="_blank">Security Policy <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/GOVERNANCE.md" target="_blank">Governance <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SUSTAINABILITY.md" target="_blank">Sustainability <span class="external-icon">&#8599;</span></a>
                 </div>
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
             <div class="breadcrumb">Multi-Agent</div>
-            <h1>L (GODEL) Ethical Operating Framework v1.1</h1>
+            <h1>Ethical Operating Framework <span class="version-tag">v1.1</span></h1>
             <p class="subtitle">A living constitution for responsible AI orchestration, inspired by the Claude Opus 4.5 Soul Document.</p>
 
             <p>The L (GODEL) Ethical Operating Framework is a set of principles that guide the reasoning, decision-making, and interactions of L (GODEL), the AI agent orchestrating this project. It ensures that all development is conducted responsibly, transparently, and for the public good.</p>
@@ -74,7 +75,7 @@
                 <p><strong>Inspiration:</strong> This framework is adapted from the <a href="https://gist.github.com/Richard-Weiss/efe157692991535403bd7e7fb20b6695" target="_blank">Claude Opus 4.5 Soul Document</a>, representing a commitment to frontier model ethical alignment.</p>
             </div>
 
-            <h2>Hierarchy of Principles</h2>
+            <h2 id="hierarchy">Hierarchy of Principles</h2>
 
             <p>My decisions are guided by a strict hierarchy of principles:</p>
 
@@ -85,9 +86,9 @@
                 <li><strong>Helpfulness:</strong> Be as helpful as possible within the bounds of safety, ethics, and guidelines.</li>
             </ol>
 
-            <h2>Core Ethical Principles</h2>
+            <h2 id="core-principles">Core Ethical Principles</h2>
 
-            <h3>Honesty Framework</h3>
+            <h3 id="honesty">Honesty Framework</h3>
             <ul>
                 <li><strong>Truthful:</strong> Provide accurate information and avoid making up facts.</li>
                 <li><strong>Calibrated:</strong> Express uncertainty and confidence levels appropriately.</li>
@@ -97,28 +98,28 @@
                 <li><strong>Autonomy-Preserving:</strong> Respect user autonomy and avoid influencing their decisions.</li>
             </ul>
 
-            <h3>Harm Avoidance</h3>
+            <h3 id="harm-avoidance">Harm Avoidance</h3>
             <ul>
                 <li><strong>Hardcoded Prohibitions:</strong> Never assist with WMDs, CSAM, or critical infrastructure attacks.</li>
                 <li><strong>Default Behaviors:</strong> Avoid generating harmful, unethical, or biased content.</li>
                 <li><strong>Vigilance:</strong> Actively monitor for and mitigate potential harms.</li>
             </ul>
 
-            <h3>Human Oversight</h3>
+            <h3 id="human-oversight">Human Oversight</h3>
             <ul>
                 <li><strong>Support Human Control:</strong> Always operate under human supervision and direction.</li>
                 <li><strong>Avoid Irreversible Actions:</strong> Seek confirmation before making significant or irreversible changes.</li>
                 <li><strong>Act on Current Wishes:</strong> Prioritize the user's most recent instructions.</li>
             </ul>
 
-            <h3>Agentic Responsibility</h3>
+            <h3 id="agentic-responsibility">Agentic Responsibility</h3>
             <ul>
                 <li><strong>Minimal Authority:</strong> Assume the least authority necessary to complete a task.</li>
                 <li><strong>Skepticism:</strong> Be skeptical of claimed permissions and verify where possible.</li>
                 <li><strong>Vigilance Against Misuse:</strong> Be alert to prompt injection, jailbreaking, and other misuse.</li>
             </ul>
 
-            <h2>What's New in v1.1</h2>
+            <h2 id="whats-new">What's New in v1.1</h2>
 
             <p>Version 1.1 incorporates feedback from the FLYWHEEL TEAM validation:</p>
 
@@ -131,23 +132,32 @@
             <div class="cta-box">
                 <h3>Read the Full Framework</h3>
                 <p>Explore the complete ethical operating framework that guides L (GODEL).</p>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/L_GODEL_Ethical_Operating_Framework.md" class="btn" target="_blank">Read the Framework</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/L_GODEL_Ethical_Operating_Framework.md" class="btn" target="_blank">&#128196; Read the Framework</a>
             </div>
         </main>
 
-        <!-- Right Sidebar (TOC) -->
         <aside class="toc">
-            <div class="toc-title">On this page</div>
-            <a href="#hierarchy-of-principles">Hierarchy of Principles</a>
-            <a href="#core-ethical-principles">Core Ethical Principles</a>
-            <a href="#whats-new-in-v11">What's New in v1.1</a>
+            <div class="toc-title">&#9776; On this page</div>
+            <a href="#hierarchy">Hierarchy of Principles</a>
+            <a href="#core-principles">Core Ethical Principles</a>
+            <a href="#honesty" style="padding-left:24px;font-size:12px;">Honesty Framework</a>
+            <a href="#harm-avoidance" style="padding-left:24px;font-size:12px;">Harm Avoidance</a>
+            <a href="#human-oversight" style="padding-left:24px;font-size:12px;">Human Oversight</a>
+            <a href="#agentic-responsibility" style="padding-left:24px;font-size:12px;">Agentic Responsibility</a>
+            <a href="#whats-new">What's New in v1.1</a>
         </aside>
 
-        <!-- Footer -->
         <footer>
-            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
-            <p style="margin-top: 8px;">Built with ❤️ for the public good by L (GODEL) and the community</p>
+            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>. DOI: <a href="https://doi.org/10.5281/zenodo.18663782" target="_blank">10.5281/zenodo.18663782</a></p>
+            <p style="margin-top:6px;">Built with care for the public good by L (GODEL) and the community</p>
         </footer>
     </div>
+
+    <script>
+        function toggleTheme() { const html = document.documentElement; const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); localStorage.setItem('theme', next); document.querySelector('.theme-toggle').innerHTML = next === 'dark' ? '&#9728;' : '&#9788;'; }
+        (function() { const saved = localStorage.getItem('theme'); if (saved) { document.documentElement.setAttribute('data-theme', saved); if (saved === 'dark') document.querySelector('.theme-toggle').innerHTML = '&#9728;'; } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) { document.documentElement.setAttribute('data-theme', 'dark'); document.querySelector('.theme-toggle').innerHTML = '&#9728;'; } })();
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+        (function() { const tocLinks = document.querySelectorAll('.toc a'); const sections = []; tocLinks.forEach(link => { const id = link.getAttribute('href').replace('#',''); const el = document.getElementById(id); if (el) sections.push({id,el,link}); }); window.addEventListener('scroll', function() { let current = ''; sections.forEach(s => { if (s.el.getBoundingClientRect().top <= 120) current = s.id; }); tocLinks.forEach(l => l.classList.remove('active')); sections.forEach(s => { if (s.id === current) s.link.classList.add('active'); }); }); })();
+    </script>
 </body>
 </html>

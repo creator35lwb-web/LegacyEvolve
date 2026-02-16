@@ -1,63 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MACP v2.0 - LegacyEvolve Protocol</title>
+    <meta name="description" content="A GitHub-native protocol for persistent, asynchronous multi-agent collaboration.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
         <header>
-            <a href="index.html" class="logo">Legacy<span>Evolve</span> Protocol</a>
-            <div class="header-links">
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <button class="mobile-menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">L</div>
+                    Legacy<span>Evolve</span>
+                </a>
+                <span class="version-tag">v2.3</span>
+            </div>
+            <div class="header-right">
+                <button class="search-trigger" onclick="alert('Search coming soon! Use Ctrl+F for now.')">
+                    <span>&#128269;</span> Search...
+                    <kbd>Ctrl K</kbd>
+                </button>
+                <div class="header-links">
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/wiki" target="_blank">Wiki</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9788;</button>
             </div>
         </header>
 
         <!-- Left Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <nav>
                 <div class="nav-section">
-                    <div class="nav-section-title">Get Started</div>
+                    <div class="nav-section-title"><span class="nav-icon">&#128218;</span> Get Started</div>
                     <a href="index.html">Introduction</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide <span class="external-icon">&#8599;</span></a>
                 </div>
-
                 <div class="nav-section">
-                    <div class="nav-section-title">Protocol</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge</a>
+                    <div class="nav-section-title"><span class="nav-icon">&#128196;</span> Protocol</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0 <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge <span class="external-icon">&#8599;</span></a>
                 </div>
-
                 <div class="nav-section">
-                    <div class="nav-section-title">Implementation</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo</a>
+                    <div class="nav-section-title"><span class="nav-icon">&#128187;</span> Implementation</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo <span class="external-icon">&#8599;</span></a>
                 </div>
-
                 <div class="nav-section">
-                    <div class="nav-section-title">Multi-Agent</div>
+                    <div class="nav-section-title"><span class="nav-icon">&#129302;</span> Multi-Agent</div>
                     <a href="macp.html" class="active">MACP v2.0</a>
                     <a href="genesis.html">Genesis Master Prompt</a>
                     <a href="ethical-framework.html">Ethical Framework</a>
                 </div>
-
                 <div class="nav-section">
-                    <div class="nav-section-title">Research</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research</a>
+                    <div class="nav-section-title"><span class="nav-icon">&#128300;</span> Research</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research <span class="external-icon">&#8599;</span></a>
                 </div>
-
                 <div class="nav-section">
-                    <div class="nav-section-title">Community</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/issues" target="_blank">Issues</a>
+                    <div class="nav-section-title"><span class="nav-icon">&#128483;</span> Community</div>
+                    <a href="announcements.html">Announcements</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing <span class="external-icon">&#8599;</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title"><span class="nav-icon">&#128274;</span> Governance</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SECURITY.md" target="_blank">Security Policy <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/GOVERNANCE.md" target="_blank">Governance <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SUSTAINABILITY.md" target="_blank">Sustainability <span class="external-icon">&#8599;</span></a>
                 </div>
             </nav>
         </aside>
@@ -65,29 +82,29 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="breadcrumb">Multi-Agent</div>
-            <h1>MACP v2.0</h1>
+            <h1>MACP v2.0 <span class="status-badge">&#10003; Production</span></h1>
             <p class="subtitle">A GitHub-native protocol for persistent, asynchronous multi-agent collaboration.</p>
 
             <p>The Multi-Agent Communication Protocol (MACP) provides a standardized framework for multiple AI agents to collaborate on complex software projects over long periods. It uses GitHub as a shared communication bridge, enabling persistent state and auditable handoffs between different agents and models.</p>
 
             <div class="info-box">
-                <p><strong>Key Innovation:</strong> MACP is the first protocol designed for **asynchronous, persistent, GitHub-native** multi-agent collaboration, filling a critical gap in the agent protocol ecosystem.</p>
+                <p><strong>Key Innovation:</strong> MACP is the first protocol designed for asynchronous, persistent, GitHub-native multi-agent collaboration, filling a critical gap in the agent protocol ecosystem.</p>
             </div>
 
-            <h2>Why MACP?</h2>
+            <h2 id="why-macp">Why MACP?</h2>
 
             <p>As AI agents become more capable, complex projects will require teams of specialized agents working together. However, existing agent protocols are designed for synchronous, runtime-only communication. This makes it difficult to:</p>
 
             <ul>
-                <li>Preserve context across long-running tasks</li>
-                <li>Handoff work between different agents (e.g., from Gemini to Claude)</li>
-                <li>Maintain a transparent audit trail of agent contributions</li>
-                <li>Ensure ethical governance across a team of agents</li>
+                <li><strong>Preserve context</strong> across long-running tasks</li>
+                <li><strong>Handoff work</strong> between different agents (e.g., from Gemini to Claude)</li>
+                <li><strong>Maintain transparency</strong> with an audit trail of agent contributions</li>
+                <li><strong>Ensure ethical governance</strong> across a team of agents</li>
             </ul>
 
             <p>MACP solves these problems by using GitHub as a persistent, auditable communication layer. All agent interactions are recorded in a structured, machine-readable format within the project repository itself.</p>
 
-            <h2>Core Concepts</h2>
+            <h2 id="core-concepts">Core Concepts</h2>
 
             <p>MACP is built on a few simple but powerful concepts:</p>
 
@@ -97,10 +114,10 @@
                 <li><strong><code>handoffs.json</code>:</strong> An immutable log of all handoffs between agents, including the task, context, and outcome.</li>
                 <li><strong><code>validation.json</code>:</strong> A record of all validation results from multi-agent reviews (e.g., FLYWHEEL TEAM).</li>
                 <li><strong><code>ethical_framework.md</code>:</strong> A mandatory document outlining the ethical principles that govern all agent behavior.</li>
-                <li><strong>Standardized Commit Messages:</strong> A formal commit message format for agent handoffs (e.g., `HANDOFF: L (GODEL) -> Z-Agent (Claude)`).</li>
+                <li><strong>Standardized Commit Messages:</strong> A formal commit message format for agent handoffs (e.g., <code>HANDOFF: L (GODEL) -&gt; Z-Agent (Claude)</code>).</li>
             </ul>
 
-            <h2>How It Works</h2>
+            <h2 id="how-it-works">How It Works</h2>
 
             <p>A typical MACP workflow looks like this:</p>
 
@@ -113,17 +130,17 @@
                 <li>Agent 2 completes the task and the cycle repeats.</li>
             </ol>
 
-            <div class="info-box">
-                <p><strong>FLYWHEEL TEAM:</strong> MACP includes a built-in validation process where a team of agents (e.g., Gemini, Claude, Manus) reviews the project state and provides feedback, ensuring quality and alignment.</p>
+            <div class="success-box">
+                <p><strong>FLYWHEEL TEAM:</strong> MACP includes a built-in validation process where a team of agents (Gemini, Claude, Manus) reviews the project state and provides feedback, ensuring quality and alignment.</p>
             </div>
 
-            <h2>Key Features</h2>
+            <h2 id="key-features">Key Features</h2>
 
             <ul>
                 <li><strong>Persistent Context:</strong> All agent interactions are stored in the repository, preserving context indefinitely.</li>
                 <li><strong>Asynchronous Collaboration:</strong> Agents can work on different tasks at different times without needing to be online simultaneously.</li>
                 <li><strong>Multi-Model Interoperability:</strong> Seamless handoffs between different AI models (Gemini, Claude, Manus, etc.).</li>
-                <li><strong>Complete Auditability:</strong> Every agent contribution is recorded in the Git history and `handoffs.json`.</li>
+                <li><strong>Complete Auditability:</strong> Every agent contribution is recorded in the Git history and <code>handoffs.json</code>.</li>
                 <li><strong>Ethical Governance:</strong> Mandatory ethical framework ensures all agents operate responsibly.</li>
                 <li><strong>Validated by FLYWHEEL TEAM:</strong> The protocol has been rigorously tested by a multi-agent team.</li>
             </ul>
@@ -131,14 +148,14 @@
             <div class="cta-box">
                 <h3>Explore the MACP Specification</h3>
                 <p>Dive into the technical details of the Multi-Agent Communication Protocol.</p>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_v2.0_Specification.md" class="btn" target="_blank">Read the Specification</a>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_Implementation_Example.md" class="btn btn-secondary" target="_blank">See an Example</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_v2.0_Specification.md" class="btn" target="_blank">&#128196; Read the Specification</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/MACP_Implementation_Example.md" class="btn btn-secondary" target="_blank">&#9654; See an Example</a>
             </div>
         </main>
 
         <!-- Right Sidebar (TOC) -->
         <aside class="toc">
-            <div class="toc-title">On this page</div>
+            <div class="toc-title">&#9776; On this page</div>
             <a href="#why-macp">Why MACP?</a>
             <a href="#core-concepts">Core Concepts</a>
             <a href="#how-it-works">How It Works</a>
@@ -147,9 +164,31 @@
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
-            <p style="margin-top: 8px;">Built with ❤️ for the public good by L (GODEL) and the community</p>
+            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>. DOI: <a href="https://doi.org/10.5281/zenodo.18663782" target="_blank">10.5281/zenodo.18663782</a></p>
+            <p style="margin-top:6px;">Built with care for the public good by L (GODEL) and the community</p>
         </footer>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            document.querySelector('.theme-toggle').innerHTML = next === 'dark' ? '&#9728;' : '&#9788;';
+        }
+        (function() {
+            const saved = localStorage.getItem('theme');
+            if (saved) { document.documentElement.setAttribute('data-theme', saved); if (saved === 'dark') document.querySelector('.theme-toggle').innerHTML = '&#9728;'; }
+            else if (window.matchMedia('(prefers-color-scheme: dark)').matches) { document.documentElement.setAttribute('data-theme', 'dark'); document.querySelector('.theme-toggle').innerHTML = '&#9728;'; }
+        })();
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+        (function() {
+            const tocLinks = document.querySelectorAll('.toc a');
+            const sections = [];
+            tocLinks.forEach(link => { const id = link.getAttribute('href').replace('#',''); const el = document.getElementById(id); if (el) sections.push({id,el,link}); });
+            window.addEventListener('scroll', function() { let current = ''; sections.forEach(s => { if (s.el.getBoundingClientRect().top <= 120) current = s.id; }); tocLinks.forEach(l => l.classList.remove('active')); sections.forEach(s => { if (s.id === current) s.link.classList.add('active'); }); });
+        })();
+    </script>
 </body>
 </html>

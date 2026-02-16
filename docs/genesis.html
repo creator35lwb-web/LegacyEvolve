@@ -1,71 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genesis Master Prompt - LegacyEvolve Protocol</title>
+    <meta name="description" content="A comprehensive onboarding document for future AI agents to seamlessly continue development.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header>
-            <a href="index.html" class="logo">Legacy<span>Evolve</span> Protocol</a>
-            <div class="header-links">
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <button class="mobile-menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">&#9776;</button>
+                <a href="index.html" class="logo"><div class="logo-icon">L</div> Legacy<span>Evolve</span></a>
+                <span class="version-tag">v2.3</span>
+            </div>
+            <div class="header-right">
+                <button class="search-trigger" onclick="alert('Search coming soon! Use Ctrl+F for now.')"><span>&#128269;</span> Search...<kbd>Ctrl K</kbd></button>
+                <div class="header-links">
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/wiki" target="_blank">Wiki</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve" target="_blank">GitHub</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Community</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9788;</button>
             </div>
         </header>
 
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <nav>
-                <div class="nav-section">
-                    <div class="nav-section-title">Get Started</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128218;</span> Get Started</div>
                     <a href="index.html">Introduction</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/ARCHITECTURE.md" target="_blank">Architecture <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/IMPLEMENTATION_GUIDE.md" target="_blank">Implementation Guide <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Protocol</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128196;</span> Protocol</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LegacyEvolve_Protocol_v2.0_Specification.md" target="_blank">Specification v2.0 <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/LEP_MCP_BRIDGE.md" target="_blank">LEP-MCP Bridge <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Implementation</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128187;</span> Implementation</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/tree/main/src/lep_py" target="_blank">Python SDK <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/src/README.md" target="_blank">SDK Documentation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/examples/cobol_mainframe_demo.py" target="_blank">COBOL Adapter Demo <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Multi-Agent</div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#129302;</span> Multi-Agent</div>
                     <a href="macp.html">MACP v2.0</a>
                     <a href="genesis.html" class="active">Genesis Master Prompt</a>
                     <a href="ethical-framework.html">Ethical Framework</a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Research</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128300;</span> Research</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/peas/TRINITY_VALIDATION_REPORT_COMPLETE.md" target="_blank">Trinity Validation <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Agent_Protocol_Ecosystem_Research_Report.md" target="_blank">Ecosystem Research <span class="external-icon">&#8599;</span></a>
                 </div>
-
-                <div class="nav-section">
-                    <div class="nav-section-title">Community</div>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a>
-                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/issues" target="_blank">Issues</a>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128483;</span> Community</div>
+                    <a href="announcements.html">Announcements</a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/discussions" target="_blank">Discussions <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/CONTRIBUTING.md" target="_blank">Contributing <span class="external-icon">&#8599;</span></a>
+                </div>
+                <div class="nav-section"><div class="nav-section-title"><span class="nav-icon">&#128274;</span> Governance</div>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SECURITY.md" target="_blank">Security Policy <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/GOVERNANCE.md" target="_blank">Governance <span class="external-icon">&#8599;</span></a>
+                    <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/SUSTAINABILITY.md" target="_blank">Sustainability <span class="external-icon">&#8599;</span></a>
                 </div>
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
             <div class="breadcrumb">Multi-Agent</div>
-            <h1>Genesis Master Prompt v3.0</h1>
+            <h1>Genesis Master Prompt <span class="version-tag">v3.0</span></h1>
             <p class="subtitle">A comprehensive onboarding document for future AI agents to seamlessly continue development.</p>
 
             <p>The Genesis Master Prompt is a living document that encapsulates the complete vision, architecture, history, and ethical alignment of the entire project ecosystem. It serves as a "cold start" guide for any future AI agent, enabling them to get up to speed and contribute meaningfully without needing to re-read the entire project history.</p>
@@ -74,7 +75,7 @@
                 <p><strong>Purpose:</strong> To ensure long-term project continuity and seamless handoffs between different AI models and agents over time.</p>
             </div>
 
-            <h2>Why a Genesis Master Prompt?</h2>
+            <h2 id="why-genesis">Why a Genesis Master Prompt?</h2>
 
             <p>As AI models evolve, the agent orchestrating this project may change. A new, more capable model might take over from L (GODEL). Without a comprehensive onboarding document, this new agent would have to spend significant time and resources re-analyzing the entire project from scratch.</p>
 
@@ -89,7 +90,7 @@
                 <li><strong>Future Roadmap:</strong> The next steps and long-term vision.</li>
             </ul>
 
-            <h2>Key Sections</h2>
+            <h2 id="key-sections">Key Sections</h2>
 
             <p>The Genesis Master Prompt is organized into several key sections:</p>
 
@@ -102,7 +103,7 @@
                 <li><strong>Current Mandate:</strong> The active goals and priorities for the new agent.</li>
             </ul>
 
-            <h2>What's New in v3.0</h2>
+            <h2 id="whats-new">What's New in v3.0</h2>
 
             <p>Version 3.0 is a major update that includes:</p>
 
@@ -116,23 +117,28 @@
             <div class="cta-box">
                 <h3>Read the Full Genesis Master Prompt</h3>
                 <p>Explore the complete onboarding document for future AI agents.</p>
-                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Genesis_Master_Prompt.md" class="btn" target="_blank">Read the Prompt</a>
+                <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/docs/Genesis_Master_Prompt.md" class="btn" target="_blank">&#128196; Read the Prompt</a>
             </div>
         </main>
 
-        <!-- Right Sidebar (TOC) -->
         <aside class="toc">
-            <div class="toc-title">On this page</div>
-            <a href="#why-a-genesis-master-prompt">Why a Genesis Master Prompt?</a>
+            <div class="toc-title">&#9776; On this page</div>
+            <a href="#why-genesis">Why a Genesis Master Prompt?</a>
             <a href="#key-sections">Key Sections</a>
-            <a href="#whats-new-in-v30">What's New in v3.0</a>
+            <a href="#whats-new">What's New in v3.0</a>
         </aside>
 
-        <!-- Footer -->
         <footer>
-            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
-            <p style="margin-top: 8px;">Built with ❤️ for the public good by L (GODEL) and the community</p>
+            <p>&copy; 2026 LegacyEvolve Protocol Authors. Licensed under <a href="https://github.com/creator35lwb-web/LegacyEvolve/blob/main/LICENSE" target="_blank">MIT License</a>. DOI: <a href="https://doi.org/10.5281/zenodo.18663782" target="_blank">10.5281/zenodo.18663782</a></p>
+            <p style="margin-top:6px;">Built with care for the public good by L (GODEL) and the community</p>
         </footer>
     </div>
+
+    <script>
+        function toggleTheme() { const html = document.documentElement; const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; html.setAttribute('data-theme', next); localStorage.setItem('theme', next); document.querySelector('.theme-toggle').innerHTML = next === 'dark' ? '&#9728;' : '&#9788;'; }
+        (function() { const saved = localStorage.getItem('theme'); if (saved) { document.documentElement.setAttribute('data-theme', saved); if (saved === 'dark') document.querySelector('.theme-toggle').innerHTML = '&#9728;'; } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) { document.documentElement.setAttribute('data-theme', 'dark'); document.querySelector('.theme-toggle').innerHTML = '&#9728;'; } })();
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+        (function() { const tocLinks = document.querySelectorAll('.toc a'); const sections = []; tocLinks.forEach(link => { const id = link.getAttribute('href').replace('#',''); const el = document.getElementById(id); if (el) sections.push({id,el,link}); }); window.addEventListener('scroll', function() { let current = ''; sections.forEach(s => { if (s.el.getBoundingClientRect().top <= 120) current = s.id; }); tocLinks.forEach(l => l.classList.remove('active')); sections.forEach(s => { if (s.id === current) s.link.classList.add('active'); }); }); })();
+    </script>
 </body>
 </html>
