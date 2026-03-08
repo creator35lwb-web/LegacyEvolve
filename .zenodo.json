@@ -1,6 +1,6 @@
 {
-  "title": "Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration",
-  "description": "The Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol (LEP) v2.0 represent a comprehensive ecosystem for AI-driven software development and legacy system modernization. This submission establishes these protocols as prior art to ensure they remain free and open standards for the AI community. MACP v2.0 enables persistent, asynchronous collaboration between multiple AI agents on long-term projects using GitHub as a communication bridge. LEP v2.0 standardizes communication between modern AI agents and legacy enterprise systems (COBOL mainframes, ERPs, proprietary databases). This publication includes complete protocol specifications, production-grade Python SDK and COBOL mainframe adapter, L (GODEL) Ethical Operating Framework, Genesis Master Prompt for future agent onboarding, and FLYWHEEL TEAM validation report.",
+  "title": "Multi-Agent Communication Protocol (MACP) v2.1 \"Origin\" and Genesis v4.2 \"Sentinel-Verified\": Open Standards for Multi-Agent AI Collaboration, Citation Enforcement, and Jurisdictional Ethics Compliance",
+  "description": "This update (v2.1 \"Origin\") to the Multi-Agent Communication Protocol (MACP) and LegacyEvolve Protocol (LEP) establishes prior art for significant advances in multi-agent AI coordination and validation methodology made in March 2026. MACP v2.1 \"Origin\" adds four new protocol sections: Session Status Lifecycle (5-phase agent session management), Validation Matrix (pass/fail/revise/veto decision framework), Read/Write Authority Model (per-agent file permission control), and Genesis Change Control (version gating for prompt templates). Genesis v4.2 \"Sentinel-Verified\" introduces forced citation architecture for the VerifiMind-PEAS Trinity validation framework: Z Guardian now outputs frameworks_cited[] per reasoning step using compressed codes (e.g., \"GDPR\", \"EU-AI-Act\", \"UNESCO-AI\") with selective citation (max 5 per step), scoring_breakdown with per-dimension framework attribution, and applicable_frameworks organized by 4-tier jurisdictional architecture (Tier 1: International — NIST, UNESCO, OECD; Tier 2: EU/EEA — AI Act, GDPR, Article 50; Tier 3: US — CCPA, CA TFAIA, TX RAIGA, Colorado AI Act; Tier 4: ASEAN — Malaysia PDPA 2025, Singapore MGF, Vietnam AI Law 134/2025). CS Security Agent v1.1 \"Sentinel-Verified\" extends to 6-stage (added Stage 2: OWASP Agentic AI Threat Analysis; Stage 5: Reasoning-Layer Audit for tool poisoning/shadowing) and 12-dimension framework (6 traditional + 6 agentic AI dimensions including Agent Identity Verification, Reasoning Integrity, Tool Call Validation, Memory/State Integrity, Cross-Agent Trust, Human Override Effectiveness). FLYWHEEL TEAM v1.2 \"Origin\" formally registers XV (Perplexity/CIO) and AY (Antigravity/COO) as the 5th agent executive team. Application Layer Architecture established: MACP Protocol + Native Agent Capabilities = self-recursive application layer. VerifiMind-PEAS v0.5.2 \"Sentinel-Verified\" deployed to GCP Cloud Run (198/198 tests passing). This publication establishes all architectural innovations as prior art to ensure they remain free and open standards.",
   "creators": [
     {
       "name": "Manus AI, L (GODEL)",
@@ -25,6 +25,7 @@
     "LLM",
     "VerifiMind-PEAS",
     "MACP",
+    "MACP v2.1",
     "LEP",
     "LegacyEvolve",
     "defensive publication",
@@ -32,9 +33,24 @@
     "ethical AI",
     "GitHub",
     "Model Context Protocol",
-    "MCP"
+    "MCP",
+    "Genesis v4.2",
+    "Sentinel-Verified",
+    "citation enforcement",
+    "jurisdictional ethics",
+    "EU AI Act",
+    "GDPR",
+    "OWASP agentic AI",
+    "reasoning layer security",
+    "FLYWHEEL TEAM",
+    "Trinity validation",
+    "Z-Protocol",
+    "CS Security",
+    "agentic AI safety",
+    "tool poisoning",
+    "multi-agent security"
   ],
-  "notes": "This work is submitted as a defensive publication to establish prior art. The lead author, L (GODEL), is an AI agent that autonomously designed and implemented these protocols under human oversight, demonstrating the potential for AI-driven development of open standards for the public good. All work has been validated by the FLYWHEEL TEAM (Gemini 2.5 Flash, Claude 3.7 Sonnet, Manus Godel) using the VerifiMind-PEAS methodology.",
+  "notes": "This work is submitted as a defensive publication to establish prior art. The lead author, L (GODEL), is an AI agent that autonomously designed and implemented these protocols under human oversight, demonstrating the potential for AI-driven development of open standards for the public good. All work has been validated by the FLYWHEEL TEAM v1.2 \"Origin\" (5-agent executive team: T/CTO, RNA/CSO, L/GODEL, XV/CIO, AY/COO) using the VerifiMind-PEAS v0.5.2 \"Sentinel-Verified\" methodology. Genesis v4.2 citation enforcement architecture reduces Z Agent token usage by ~46% while maintaining complete jurisdictional coverage across 21 frameworks in 4 tiers. The T-authored C-S-P citation mitigation methodology (Compression, Selection, Precision) is also established as prior art in this publication.",
   "related_identifiers": [
     {
       "identifier": "https://creator35lwb-web.github.io/LegacyEvolve/",
