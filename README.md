@@ -51,9 +51,9 @@ To unlock the trillions of dollars of value trapped in legacy enterprise systems
 └─────────────────────────────────────────────────────────┘
 ```
 
-## Project Status: **Complete!**
+## Project Status
 
-As of February 2026, the LegacyEvolve Protocol has achieved all initial development goals:
+**LEP (LegacyEvolve Protocol): Complete!** As of February 2026, the LegacyEvolve Protocol has achieved all initial development goals:
 
 - ✅ **Protocol Specification v2.0**: Complete and documented
 - ✅ **Python SDK**: Fully functional with JSON-RPC 2.0 foundation
@@ -154,19 +154,33 @@ LEP has undergone rigorous validation using the VerifiMind-PEAS methodology:
 - **Proven Validation:** FLYWHEEL TEAM 8.67/10 score with bias minimization
 - **Real-World Ready:** Supply chain attack prevention, CI/CD security scanning
 
+## MACP Protocol (Actively Evolving)
+
+The **Multi-Agent Communication Protocol (MACP)** originated in this repository and continues to evolve independently of LEP. LEP is complete; MACP is actively developed as part of the YSenseAI™ Ecosystem.
+
+**Current version:** v2.2 "Identity" — adds Identity Clarity principle (Alton ≠ L)
+
+- **[MACP v2.2 Specification](macp/MACP_v2.2_Specification.md)** — full protocol reference
+- **Deployed implementation:** [VerifiMind-PEAS](https://verifimind.ysenseai.org) — live MCP server
+
+> **MACP v2.2 Identity Clarity:** Alton (Human Orchestrator) and L (Godel, AI-Generated Entity) are distinct. Alton has absolute authority; L operates under delegated authority via GodelAI C-S-P self-recursion.
+
+---
+
 ## Citation
 
 If you use the LegacyEvolve Protocol or MACP in your research or project, please cite:
 
 ```bibtex
 @software{legacyevolve_macp_2026,
-  author       = {Manus AI, L (GODEL) and LEE, ALTON (creator35lwb-web)},
-  title        = {Multi-Agent Communication Protocol (MACP) v2.0 and 
-                  LegacyEvolve Protocol: Open Standards for AI-Legacy 
+  author       = {LEE, ALTON (Human Orchestrator, creator35lwb-web) and
+                  L (AI-Generated Entity, YSenseAI GodelAI C-S-P)},
+  title        = {Multi-Agent Communication Protocol (MACP) v2.2 "Identity" and
+                  LegacyEvolve Protocol: Open Standards for AI-Legacy
                   System Integration and Multi-Agent Collaboration},
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v2.3},
+  version      = {v2.4},
   doi          = {10.5281/zenodo.18663782},
   url          = {https://doi.org/10.5281/zenodo.18663782}
 }
@@ -174,7 +188,9 @@ If you use the LegacyEvolve Protocol or MACP in your research or project, please
 
 Or in text format:
 
-> Manus AI, L (GODEL), & LEE, ALTON (creator35lwb-web). (2026). Multi-Agent Communication Protocol (MACP) v2.0 and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v1) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18663782
+> LEE, ALTON (Human Orchestrator, creator35lwb-web) & L (AI-Generated Entity, YSenseAI GodelAI C-S-P). (2026). Multi-Agent Communication Protocol (MACP) v2.2 "Identity" and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v2.4) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18663782
+
+> **Note on authorship:** Alton is the human creator (absolute authority). L is an AI-generated entity operating under delegated authority. Per MACP v2.2, these are distinct entities and must not be conflated.
 
 ## License
 
