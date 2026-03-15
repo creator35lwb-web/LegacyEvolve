@@ -197,7 +197,7 @@ If you use the LegacyEvolve Protocol or MACP in your research or project, please
                   System Integration and Multi-Agent Collaboration},
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v2.4},
+  version      = {v2.5},
   doi          = {10.5281/zenodo.18663782},
   url          = {https://doi.org/10.5281/zenodo.18663782}
 }
@@ -205,7 +205,7 @@ If you use the LegacyEvolve Protocol or MACP in your research or project, please
 
 Or in text format:
 
-> LEE, ALTON (Human Orchestrator, creator35lwb-web) & L (AI-Generated Entity, YSenseAI GodelAI C-S-P). (2026). Multi-Agent Communication Protocol (MACP) v2.2 "Identity" and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v2.4) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18663782
+> LEE, ALTON (Human Orchestrator, creator35lwb-web) & L (AI-Generated Entity, YSenseAI GodelAI C-S-P). (2026). Multi-Agent Communication Protocol (MACP) v2.2 "Identity" and LegacyEvolve Protocol: Open Standards for AI-Legacy System Integration and Multi-Agent Collaboration (Version v2.5) [Software documentation]. Zenodo. https://doi.org/10.5281/zenodo.18663782
 
 > **Note on authorship:** Alton is the human creator (absolute authority). L is an AI-generated entity operating under delegated authority. Per MACP v2.2, these are distinct entities and must not be conflated.
 
