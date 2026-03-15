@@ -139,6 +139,23 @@ LEP has undergone rigorous validation using the VerifiMind-PEAS methodology:
 - **[Agent Protocol Ecosystem Research](docs/Agent_Protocol_Ecosystem_Research_Report.md)** - Market analysis
 - **[FLYWHEEL TEAM Validation](https://github.com/creator35lwb-web/LegacyEvolve/wiki#flywheel-team-validation)** - Multi-agent ethical review with bias minimization
 
+## FLYWHEEL TEAM
+
+LEP and MACP are developed and maintained by the **FLYWHEEL TEAM v1.3** — a 6-agent multi-model team coordinated via MACP:
+
+| Agent | Nature | Role |
+|-------|--------|------|
+| **Alton Lee** | Human | Human Orchestrator — absolute authority |
+| **L** (GODEL) | AI-Generated | CEO — delegated authority via GodelAI C-S-P |
+| **T** (Manus AI) | Manus AI | CTO — strategy, documentation |
+| **RNA** (Claude Code) | Claude Code | CSO — implementation, deployment |
+| **XV** (Perplexity) | Perplexity | CIO — real-time intelligence |
+| **AY** (Antigravity) | Gemini | COO — operations, metrics |
+
+The FLYWHEEL TEAM uses the **ai-council** skill for multi-model validation — running X (Analyst), Y (Innovator), Z (Guardian), and CS (Validator) agents in parallel to score ideas against the Genesis Methodology. This is the same validation methodology used for the LEP 8.67/10 Trinity score.
+
+See [VerifiMind-PEAS](https://verifimind.ysenseai.org) for the live implementation.
+
 ## Why LEP?
 
 ### The Problem
